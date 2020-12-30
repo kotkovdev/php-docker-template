@@ -7,7 +7,7 @@ services:
     volumes:
       - ./:/var/www
     environment:
-      XDEBUG_CONFIG: "remote_host=172.17.0.1 remote_enable=1"
+      XDEBUG_CONFIG: "remote_host=$XDEBUG_HOST remote_enable=$XDEBUG_REMOTE_ENABLE"
       PHP_IDE_CONFIG: "serverName=localhost"
   nginx:
     container_name: nginx
